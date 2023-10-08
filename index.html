@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent a car</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container sticky-top w-100">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-car-front"
+              viewBox="0 0 16 16"
+              style="color: rgb(254, 95, 0)"
+            >
+              <path
+                d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"
+              />
+              <path
+                d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"
+              />
+            </svg>
+            Rent A Car</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Početna</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#UPonudi">U ponudi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Info
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#Onama">O nama</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#Iskustvaa">Iskustva</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#Q&A"
+                      >Često postavljena pitanja</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#LokacijaIKontakt"
+                      >Lokacija i kontakt</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                id="text-form"
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                style="border-color: white"
+              />
+              <button
+                onclick="searchClick()"
+                class="btn btn-outline-success"
+                type="submit"
+                style="border-color: white; color: white"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="px-4 py-5 my-5 text-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          fill="currentColor"
+          class="bi bi-car-front"
+          viewBox="0 0 16 16"
+          style="color: rgb(254, 95, 0)"
+        >
+          <path
+            d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"
+          />
+          <path
+            d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"
+          />
+        </svg>
+        <h1 class="display-5 fw-bold text-body-emphasis">RENT A CAR</h1>
+        <div class="col-lg-6 mx-auto d-sm-flex.flex-column">
+          <p class="lead mb-4">
+            Sanjate li putovanju ili vam je potreban pouzdan automobil za vaše
+            naredno poslovno putovanje? Ne tražite dalje! Naše izuzetne usluge
+            iznajmljivanja automobila su ovdje da vam pruže ključeve za vaše
+            putovanje. U "Rent a Car", razumijemo da su praktičnost,
+            pristupačnost i fleksibilnost od suštinskog značaja kada je u
+            pitanju iznajmljivanje automobila, i pokrivamo sve te aspekte.
+          </p>
+          <div class="d-grid gap-2 d-sm-flex.flex justify-content-center">
+            <p class="gap-1">
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="collapse"
+                href="#collapseExample"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-90deg-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"
+                  />
+                </svg>
+              </a>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-90deg-up"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
+                  />
+                </svg>
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                "Kvalitetni automobili za bezgranične avanture - Rent a Car, jer
+                Vaše putovanje zaslužuje najbolje!"
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="./images/picture1.webp"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+            Širok izbor vozila i pristupačne cijene
+          </h1>
+          <p class="lead">
+            Širok izbor vozila bilo da ste solo putnik, par u potrazi za
+            romantičnim bijegom, porodica koja kreće na odmor, ili poslovni
+            profesionalac koji prisustvuje važnim sastancima, imamo savršeno
+            vozilo koje će zadovoljiti vaše potrebe. Od kompaktnih automobila
+            koji su laki za manevrisanje kroz prometne gradske ulice do
+            prostranih SUV-ova koji mogu udobno primiti vašu cijelu ekipu, naš
+            raznolik vozni park ima nešto za svakoga. Pristupačne cijene i
+            finansijska ograničenja nikada ne bi smjela obeshrabriti vaše
+            putničke planove. Zato nudimo konkurentne cijene iznajmljivanja koje
+            neće narušiti vaš budžet. Naša transparentna cjenovna politika
+            osigurava da uvijek znate koliko plaćate, bez skrivenih troškova ili
+            iznenađenja. Također, redovno nudimo posebne promocije i popuste,
+            čineći vaše putovanje još pristupačnijim.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="#UPonudi"
+              ><button
+                type="button"
+                class="btn btn-primary btn-lg px-4 me-md-2"
+              >
+                Pogledaj ponudu
+              </button></a
+            >
+            <a href="#LokacijaIKontakt"
+              ><button
+                type="button"
+                class="btn btn-outline-secondary btn-lg px-4"
+              >
+                Posjeti nas
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5 my-5">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/picture1.webp" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/picture2.webp" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/picture3.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 id="UPonudi" class="pb-2 border-bottom">U ponudi</h2>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="./images/audia6avant.webp"
+              class="card-img-top"
+              alt="audia6avant"
+            />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Audi A6 Avant</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 149.00<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 3.0 TDI</li>
+                      <li>Konjske snage: 286hp</li>
+                      <li>Potrošnja: 5-6L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form
+                              action="mailto:emailid@example.com"
+                              method="post"
+                            >
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-bs-dismiss="modal"
+                                >
+                                  Zatvori
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                  Pošalji
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./images/bmwm8.jpg" class="card-img-top" alt="bmwm8" />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">BMW M8</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 199.99<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 4.4-litarski V8 twin-turbo</li>
+                      <li>Konjske snage: 600hp</li>
+                      <li>Potrošnja: 11-12L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Zatvori
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Pošalji
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="./images/audirs7sportback.jpg"
+              class="card-img-top"
+              alt="audirs7sportback"
+            />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Audi RS7 Sportback</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 229.99<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 4.0-litarski V8 twin-turbo</li>
+                      <li>Konjske snage: 591hp</li>
+                      <li>Potrošnja: 11-12L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Zatvori
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Pošalji
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="./images/bmwf82m4.webp"
+              class="card-img-top"
+              alt="bmwf82m4"
+            />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">BMW F82 M4</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 189.99<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 3.0-litarski TwinPower Turbo inline-6</li>
+                      <li>Konjske snage: 473hp</li>
+                      <li>Potrošnja: 10-11L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Zatvori
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Pošalji
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./images/golf7r.jpg" class="card-img-top" alt="golf7r" />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Golf 7 R-Line</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 119.99<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 2.0-litarski TSI turbo benzinski motor</li>
+                      <li>Konjske snage: 315hp</li>
+                      <li>Potrošnja: 7-8L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Zatvori
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Pošalji
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="./images/mercedescls63amg.webp"
+              class="card-img-top"
+              alt="mercedescls63amg"
+            />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Mercedes CLS63 AMG</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 189.99<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 4.0-litarski V8 twin-turbo</li>
+                      <li>Konjske snage: 603hp</li>
+                      <li>Potrošnja: 10-12L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Zatvori
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Pošalji
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="./images/nisangtrr35.jpg"
+              class="card-img-top"
+              alt="nisangtrr35"
+            />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Nissan GT-R R35</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 299.99<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 3.8-litarski V6 twin-turbo</li>
+                      <li>Konjske snage: 565hp</li>
+                      <li>Potrošnja: 11-12L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Zatvori
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Pošalji
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="./images/seatcupraleon.webp"
+              class="card-img-top"
+              alt="seatcupraleon"
+            />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Seat Cupra Leon</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 79.99<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 2.0-litarski TSI turbo benzinski motor</li>
+                      <li>Konjske snage: 300hp</li>
+                      <li>Potrošnja: 7-8L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Zatvori
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Pošalji
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="./images/mercedesamggt63sEperformance.jpeg"
+              class="card-img-top"
+              alt="mercedesamggt63sEperformance"
+            />
+            <div class="card-body">
+              <div class="col">
+                <div class="card mb-1 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Mercedes AMG GT63s</h4>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title pricing-card-title">
+                      BAM 219.99<small class="text-body-secondary fw-light"
+                        >/dan</small
+                      >
+                    </h2>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Godina proizvodnje: 2021</li>
+                      <li>Motor: 4.0-litarski V8 twin-turbo</li>
+                      <li>Konjske snage: 630hp</li>
+                      <li>Potrošnja: 12-14L/100km</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      data-bs-whatever="@mdo"
+                    >
+                      Rezerviši
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="exampleModal"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                              Nova poruka
+                            </h1>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label
+                                  for="recipient-name"
+                                  class="col-form-label"
+                                  >Prima:</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label"
+                                  >Poruka:</label
+                                >
+                                <textarea
+                                  class="form-control"
+                                  id="message-text"
+                                ></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Zatvori
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Pošalji
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Onama" class="container mt-5">
+      <h2 class="pb-2 border-bottom">O nama</h2>
+      <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+        <div class="col d-flex flex-column align-items-start gap-2">
+          <h2 class="fw-bold text-body-emphasis">Ko smo mi i šta nudimo?</h2>
+          <p class="text-body-secondary">
+            Mi smo tim stručnjaka za iznajmljivanje automobila s godinama
+            iskustva u industriji. Naša predanost kvaliteti i korisničkom
+            zadovoljstvu ključna su komponenta naše filozofije. Razumijemo da je
+            svaka vaša vožnja jedinstvena i zato smo tu da vam pružimo
+            prilagođene usluge koje odgovaraju vašim potrebama. Kod nas,
+            korisnici su uvijek na prvom mjestu. Naš tim je ovdje da vam pomogne
+            u svakom koraku, odabiru vozila, procesu rezervacije, pa sve do
+            povrata automobila. Naša korisnička podrška dostupna je 24/7 kako
+            biste se osjećali sigurno i podržano tijekom vašeg putovanja.
+          </p>
+          <p>
+            <button
+              class="btn btn-primary btn-lg"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample"
+              aria-expanded="false"
+              aria-controls="collapseWidthExample"
+            >
+              Proširi
+            </button>
+          </p>
+          <div style="min-height: 120px">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+              <div class="card card-body" style="width: 300px">
+                "Sloboda na dlanu ruke - rentuj, vozi, uživaj!"
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="row row-cols-1 row-cols-sm-2 g-4">
+            <div class="col d-flex flex-column gap-2">
+              <div
+                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                style="background-color: rgb(254, 95, 0) !important"
+              >
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#collection"></use>
+                </svg>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">
+                Sloboda putovanja na dlanu ruke
+              </h4>
+              <p class="text-body-secondary">
+                Želimo vam omogućiti nezaboravna putovanja i slobodu
+                istraživanja.
+              </p>
+            </div>
+
+            <div class="col d-flex flex-column gap-2">
+              <div
+                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                style="background-color: rgb(254, 95, 0) !important"
+              >
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#gear-fill"></use>
+                </svg>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">
+                Transparentnost bez skrivenih troškova
+              </h4>
+              <p class="text-body-secondary">
+                Transparentnost je ključna za nas, nema skrivenih troškova.
+              </p>
+            </div>
+
+            <div class="col d-flex flex-column gap-2">
+              <div
+                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                style="background-color: rgb(254, 95, 0) !important"
+              >
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#speedometer"></use>
+                </svg>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">
+                Posvećeni korisničkoj usluzi
+              </h4>
+              <p class="text-body-secondary">
+                Korisnička usluga je naš prioritet, a naš tim je ovdje da vam
+                pomogne u svakom koraku.
+              </p>
+            </div>
+
+            <div class="col d-flex flex-column gap-2">
+              <div
+                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                style="background-color: rgb(254, 95, 0) !important"
+              >
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#table"></use>
+                </svg>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">
+                Vozila za sva putovanja
+              </h4>
+              <p class="text-body-secondary">
+                Naša flota vozila obuhvaća širok spektar opcija prilagođenih
+                vašim potrebama.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container px-4 unsplash-photo-1" id="icon-grid">
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5"
+      >
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Kvaliteta je naša tradicija
+            </h3>
+            <p>
+              Nismo kompromisni kada je u pitanju kvaliteta usluge i vozila koje
+              vam pružamo.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#cpu-fill"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Lokalno znanje, globalni domet
+            </h3>
+            <p>
+              S našim bogatim iskustvom i obilnim znanjem, pružamo usluge najma
+              automobila diljem svijeta.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#calendar3"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Flota za sve prilike
+            </h3>
+            <p>
+              Naša raznolika flota obuhvaća sve, od kompaktnih automobila do
+              luksuznih limuzina, sve u cilju zadovoljavanja potreba šireg
+              spektra ljudi.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#home"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Brza rezervacija bez stresa
+            </h3>
+            <p>
+              Rezerviranje automobila kod nas je jednostavno i brzo,
+              omogućavajući Vam da se uskoro uputite na put.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#speedometer2"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Prilagodite svoje iznajmljivanje
+            </h3>
+            <p>
+              Nudimo vam prilagođene opcije kako biste dobili upravo ono što vam
+              treba za vaše putovanje.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#toggles2"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Vaša sigurnost, naš prioritet
+            </h3>
+            <p>
+              Vozila su redovito održavana i provjeravana kako bi se osigurala
+              vaša sigurnost na cestama.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#geo-fill"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Partner za vašu mobilnost
+            </h3>
+            <p>
+              Mi smo vaš partner za putovanje i mobilnost, pružajući Vam
+              pouzdane usluge iznajmljivanja automobila.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#tools"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Konkurentne Cijene za Vaš budžet
+            </h3>
+            <p>
+              Naše cijene su konkurentske, čineći iznajmljivanje automobila
+              pristupačnim.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Iskustvaa" class="container px-4 py-5" id="custom-cards">
+      <h2 class="pb-2 border-bottom">Iskustva</h2>
+
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="
+              background-image: url('./images/image1.png');
+              background-position: center;
+            "
+          >
+            <div
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            >
+              <h5 class="pt-5 mt-5 mb-4 display-12 lh-1 fw-bold">
+                "Iznajmljivanje automobila kod Rent a Car-a bilo je izvanredno
+                iskustvo s brzom rezervacijom, izvrsno održavanim vozilima i
+                vrhunskom korisničkom podrškom."
+              </h5>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="./images/man1.jpg"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                  <small>Mirza</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-calendar4-week"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
+                    />
+                    <path
+                      d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                    />
+                  </svg>
+                  <small>3d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="
+              background-image: url('./images/image2.jpg');
+              background-position: center;
+            "
+          >
+            <div
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            >
+              <h5 class="pt-5 mt-5 mb-4 display-12 lh-1 fw-bold">
+                "Rent a Car je pružio vrhunsku uslugu iznajmljivanja automobila
+                za naš obiteljski odmor s povoljnim cijenama i udobnim
+                vozilima."
+              </h5>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="./images/woman1.webp"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                  <small>Amina</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-calendar4-week"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
+                    />
+                    <path
+                      d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                    />
+                  </svg>
+                  <small>4d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="
+              background-image: url('./images/image3.jpg');
+              background-position: center;
+            "
+          >
+            <div
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            >
+              <h5 class="pt-5 mt-5 mb-4 display-12 lh-1 fw-bold">
+                "Rent a Car je osigurao bezbrižno putovanje s brzom
+                rezervacijom, čistim automobilom i izuzetno ljubaznim osobljem."
+              </h5>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="./images/man2.jpg"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                  <small>Dženan</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-calendar4-week"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
+                    />
+                    <path
+                      d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                    />
+                  </svg>
+                  <small>1w</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="
+              background-image: url('./images/image4.jpg');
+              background-position: center;
+            "
+          >
+            <div
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            >
+              <h5 class="pt-5 mt-5 mb-4 display-12 lh-1 fw-bold">
+                "Rent a Car je olakšao poslovna putovanja s pouzdanim vozilima i
+                jednostavnim procesom najma."
+              </h5>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="./images/woman2.webp"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                  <small>Elma</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-calendar4-week"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
+                    />
+                    <path
+                      d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                    />
+                  </svg>
+                  <small>2w</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="
+              background-image: url('./images/image5.jpg');
+              background-position: center;
+            "
+          >
+            <div
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            >
+              <h5 class="pt-5 mt-5 mb-4 display-12 lh-1 fw-bold">
+                "Fantastično iskustvo s Rent a Car-om, prilagodljivi i
+                fleksibilni, vozilo je bilo savršeno za moje putovanje."
+              </h5>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="./images/man3.jpg"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                  <small>Haris</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-calendar4-week"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
+                    />
+                    <path
+                      d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                    />
+                  </svg>
+                  <small>2w</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="
+              background-image: url('./images/image6.jpg');
+              background-position: center;
+            "
+          >
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <h5 class="pt-5 mt-5 mb-4 display-12 lh-1 fw-bold">
+                "Iznajmljivanje automobila kod Rent a Car-a bilo je izvanredno
+                iskustvo s brzom rezervacijom, izvrsno održavanim vozilima i
+                vrhunskom korisničkom podrškom."
+              </h5>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="./images/woman3.webp"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                  <small>Azra</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-calendar4-week"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
+                    />
+                    <path
+                      d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                    />
+                  </svg>
+                  <small>3w</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Q&A" class="container">
+      <h2 class="pb-2 border-bottom">Često postavljena pitanja</h2>
+      <div
+        class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"
+      >
+        <div class="list-group">
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoC.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Kako mogu rezervirati automobil?</h6>
+                <p class="mb-0 opacity-75">
+                  Rezervacija automobila kod nas je jednostavna. Možete to
+                  učiniti online putem naše web stranice ili nas kontaktirati
+                  telefonom. Naša korisnička podrška će vam pomoći u odabiru
+                  vozila i procesu rezervacije.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">now</small>
+            </div>
+          </a>
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoD.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Koje su cijene najma automobila?</h6>
+                <p class="mb-0 opacity-75">
+                  Cijene najma automobila variraju ovisno o vrsti vozila,
+                  trajanju najma i dodatnim uslugama koje odaberete. Detaljne
+                  informacije o cijenama možete pronaći na našoj web stranici
+                  ili kontaktirati nas za ponudu.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">3d</small>
+            </div>
+          </a>
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoE.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Koje dokumente trebam za najam automobila?</h6>
+                <p class="mb-0 opacity-75">
+                  Za najam automobila obično će vam biti potrebna važeća vozačka
+                  dozvola, osobna iskaznica ili putovnica te kreditna kartica za
+                  uplatu. Kontaktirajte nas za više informacija.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">5d</small>
+            </div>
+          </a>
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoF.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Mogu li iznajmiti automobil na aerodromu?</h6>
+                <p class="mb-0 opacity-75">
+                  Da, nudimo uslugu najma automobila na mnogim aerodromima.
+                  Možete rezervirati automobil i preuzeti ga odmah nakon dolaska
+                  na odredište.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">6d</small>
+            </div>
+          </a>
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoJ.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Šta uključuje cijenu najma automobila?</h6>
+                <p class="mb-0 opacity-75">
+                  Cijena najma automobila obično uključuje osnovno osiguranje i
+                  neograničenu kilometražu. Dodatne usluge poput dodatnog
+                  vozača, GPS-a i osiguranja od štete možete dodatno rezervirati
+                  uz doplatu.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">1w</small>
+            </div>
+          </a>
+        </div>
+        <div class="list-group">
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoR.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Kako vraćam automobil nakon najma?</h6>
+                <p class="mb-0 opacity-75">
+                  Vraćanje automobila je obično jednostavno. Dogovorite se o
+                  vremenu i mjestu povrata s našim osobljem ili unaprijed
+                  planiranim lokacijama za vraćanje. Provjerite da ste izvadili
+                  svoje osobne stvari iz vozila i vratili ga s punim spremnikom
+                  goriva.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">1w</small>
+            </div>
+          </a>
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoS.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Koja je politika otkazivanja rezervacije?</h6>
+                <p class="mb-0 opacity-75">
+                  Naša politika otkazivanja može se razlikovati ovisno o vrsti
+                  rezervacije i vremenskom razdoblju do otkazivanja.
+                  Kontaktirajte nas za dodatne informacije.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">2w</small>
+            </div>
+          </a>
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoT.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">
+                  Trebam li dodatno osiguranje za najam automobila?
+                </h6>
+                <p class="mb-0 opacity-75">
+                  Osnovno osiguranje obično je uključeno u cijenu najma.
+                  Međutim, možete odabrati dodatno osiguranje kako biste se
+                  dodatno osigurali od potencijalnih rizika, poput oštećenja
+                  vozila ili krađe. Detalje i cijene dodatnog osiguranja možete
+                  pronaći na našoj web stranici.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">2w</small>
+            </div>
+          </a>
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoU.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">
+                  Mogu li unajmiti automobil ako sam mladi vozač ili nemam dugu
+                  vozačku dozvolu?
+                </h6>
+                <p class="mb-0 opacity-75">
+                  Da, obično možete unajmiti automobil čak i ako ste mladi vozač
+                  ili nemate dugu vozačku dozvolu. Međutim, moguće je da ćete
+                  biti podložni dodatnim uvjetima ili doplatama za mlade vozače.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">3w</small>
+            </div>
+          </a>
+          <a
+            class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            aria-current="true"
+          >
+            <img
+              src="./images/slovoV.png"
+              alt="twbs"
+              width="32"
+              height="32"
+              class="rounded-circle flex-shrink-0"
+              style="background-color: rgb(254, 95, 0)"
+            />
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">
+                  Šta trebam učiniti ako imam problema ili nesreću s
+                  iznajmljenim automobilom?
+                </h6>
+                <p class="mb-0 opacity-75">
+                  U slučaju problema ili nesreće, odmah nas kontaktirajte putem
+                  broja za hitne slučajeve koji ćete dobiti prilikom preuzimanja
+                  vozila. Naše osoblje će vam pružiti potrebne upute i pomoći
+                  vam da riješite situaciju. Također, imajte na umu da je važno
+                  slijediti lokalne zakone i propise u vezi s prometnim
+                  nesrećama.
+                </p>
+              </div>
+              <small class="opacity-50 text-nowrap">1m</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="LokacijaIKontakt" class="container">
+      <h2 class="pb-2 border-bottom">Lokacija i kontakt</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2419.2604233727275!2d18.406343202720688!3d43.855793260755924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8d8d3548b31%3A0xaa468a5270b944ae!2sMar%C5%A1ala%20Tita%201-3%2C%20Sarajevo%2071000!5e0!3m2!1sen!2sba!4v1696705579488!5m2!1sen!2sba"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-car-front"
+              viewBox="0 0 16 16"
+              style="color: rgb(254, 95, 0)"
+            >
+              <path
+                d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"
+              />
+              <path
+                d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"
+              />
+            </svg>
+          </a>
+          <small class="d-block mb-3 text-body-secondary">© Rent a car</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5 style="user-select: none">Kontaktirajte nas</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                >Broj telefona: +387 33/000-000</a
+              >
+            </li>
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                >Email: rentacar@gmail.com</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-secondary text-decoration-none"
+                href="https://www.instagram.com/"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-secondary text-decoration-none"
+                href="https://twitter.com/"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-secondary text-decoration-none"
+                href="https://www.facebook.com/"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-secondary text-decoration-none"
+                href="https://www.youtube.com/"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 style="user-select: none">Sadržaj</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Početna</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#UPonudi"
+                >U ponudi</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#Onama"
+                >O nama</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#Iskustvaa"
+                >Iskustva</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#Q&A"
+                >Često postavljena pitanja</a
+              >
+            </li>
+            <li>
+              <a
+                class="link-secondary text-decoration-none"
+                href="#LokacijaIKontakt"
+                >Lokacija i kontakt</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 style="user-select: none">Sponzori</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                href="https://www.audi.com/en.html"
+                >Audi</a
+              >
+            </li>
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                href="https://www.bmw.com/en/index.html"
+                >BMW</a
+              >
+            </li>
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                href="https://www.mercedes-benz.com/en/"
+                >Mercedes</a
+              >
+            </li>
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                href="https://www.vw.com/en.html"
+                >Volkswagen</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 style="user-select: none">Radno vrijeme</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                >Ponedjeljak - Petak: 08:00 - 18:00</a
+              >
+            </li>
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                >Subota: 09:00 - 13:00</a
+              >
+            </li>
+            <li>
+              <a
+                style="user-select: none"
+                class="link-secondary text-decoration-none"
+                >Nedjelja: 10:00 - 13:00</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
